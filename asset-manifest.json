@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/karata/static/css/main.073c9b0a.css",
-    "main.js": "/karata/static/js/main.3af88a30.js",
-    "static/js/787.79ce83b4.chunk.js": "/karata/static/js/787.79ce83b4.chunk.js",
-    "static/media/logo.svg": "/karata/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/karata/static/css/main.9be58a85.css",
+    "main.js": "/karata/static/js/main.0259667b.js",
+    "static/media/OpenSans-Bold.ttf": "/karata/static/media/OpenSans-Bold.dbb97fd982ce1b96b6de.ttf",
+    "static/media/OpenSans-Light.ttf": "/karata/static/media/OpenSans-Light.ed41bedf131bc097372a.ttf",
+    "static/media/OpenSans-SemiBold.ttf": "/karata/static/media/OpenSans-SemiBold.a16d8201b06a03c6c365.ttf",
+    "static/media/OpenSans-Regular.ttf": "/karata/static/media/OpenSans-Regular.1b0809d519837cb7aad3.ttf",
+    "static/media/OpenSans-LightItalic.ttf": "/karata/static/media/OpenSans-LightItalic.0e63c9e707bdfbcda307.ttf",
+    "static/media/OpenSans-Italic.ttf": "/karata/static/media/OpenSans-Italic.20653d2fac6285bf4dea.ttf",
+    "static/media/gadi-almog-regular-aaa.otf": "/karata/static/media/gadi-almog-regular-aaa.431e629642034fe87586.otf",
     "index.html": "/karata/index.html",
-    "main.073c9b0a.css.map": "/karata/static/css/main.073c9b0a.css.map",
-    "main.3af88a30.js.map": "/karata/static/js/main.3af88a30.js.map",
-    "787.79ce83b4.chunk.js.map": "/karata/static/js/787.79ce83b4.chunk.js.map"
+    "main.9be58a85.css.map": "/karata/static/css/main.9be58a85.css.map",
+    "main.0259667b.js.map": "/karata/static/js/main.0259667b.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.3af88a30.js"
+    "static/css/main.9be58a85.css",
+    "static/js/main.0259667b.js"
   ]
 }
