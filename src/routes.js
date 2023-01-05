@@ -1,8 +1,10 @@
-import Welcome from "./pages/welcome.jsx";
+import Welcome from "./pages/welcome/welcome.jsx";
 
-export const routes = [
+ const routes = [
   {
     path: "/",
     component: Welcome,
   },
 ];
+
+export default routes
