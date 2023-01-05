@@ -1,0 +1,13 @@
+// SETUP
+@import './setup/typography';
+@import './setup/variables';
+@import './setup/functions';
+
+//BASICS
+@import './basic/base';
+
+//PAGES
+@import './pages/welcome';
+
+// COMPONENTS
+// @import './cmps/board/board-header';
