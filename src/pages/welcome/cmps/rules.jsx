@@ -1,6 +1,6 @@
 const Rules = () => {
   return (
-    <section className="rules">
+    <div className="rules">
       <h3>הוראות המשחק</h3>
       <p>יוצרים משחק חדש ומזמינים חברים להצטרף אליכם</p>
       <div className="circle"></div>
@@ -23,7 +23,7 @@ const Rules = () => {
       </p>
       <div className="circle"></div>
       <p>המנצח הוא השחקן הראשון שמגיע ל20 נקודות!</p>
-    </section>
+    </div>
   );
 };
 

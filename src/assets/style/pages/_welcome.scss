@@ -1,0 +1,20 @@
+.welcome {
+    background-image: linear-gradient($bg-2, $bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    gap: 30px;
+
+    .btns-box {
+        box-shadow: $white-opc;
+        background-color: $bg;
+        width: 324px;
+        border-radius: 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+    }
+}

@@ -5,7 +5,18 @@ $bg-2: #715cbc;
 $yellow: #f5be0a;
 $green: #1ec896;
 $pink: #da447d;
+$blue: #417dfe;
 $gray: #4d4d4d;
 
 $black: #0a0a0a;
 $white: #ffffff;
+
+$black-opc: #0a0a0a25;
+$white-opc: #ffffff35;
+
+// SHADOW
+$white-shadow: 0 0 10px #ffffff50;
+$black-shadow: 0 5px 5px 0 $black-opc;
+
+$inner-shadow: inset 0px -5px 3px 0  $black-opc;
+$active-shadow: inset 0px 5px 3px 0  $black-opc;
