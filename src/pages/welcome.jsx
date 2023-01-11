@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
-import BigHeader from "../../cmps/big-header";
-import Footer from "../../cmps/footer/footer";
-import Rules from "./cmps/rules";
+import BigHeader from "../cmps/big-header";
 
 const Welcome = () => {
   return (

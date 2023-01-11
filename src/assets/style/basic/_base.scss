@@ -23,15 +23,16 @@ body {
 
         & > * {
             min-height: 100vh;
+            max-width: 415px;
             // height: 100%;
             // width: 415px;
             // margin: 0 auto;
-            .content {
-                flex-grow: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
-            }
+            // .content {
+            //     flex-grow: 1;
+            //     display: flex;
+            //     flex-direction: column;
+            //     gap: 30px;
+            // }
         }
     }
 }
@@ -45,6 +46,13 @@ h6,
 p {
     padding: 0;
     margin: 0;
+}
+
+h2 {
+    color: $green;
+    font-size: rem(20px);
+    font-family: ga;
+    font-weight: lighter;
 }
 
 img {
@@ -62,8 +70,8 @@ input {
 }
 
 button {
-    // min-width: 150px;
-    width: 100%;
+    // width: 100%;
+    // max-width: 385px;
     font-family: os-i, sans-serif;
     font-size: rem(18px);
     padding: 10px 20px;
@@ -73,6 +81,8 @@ button {
     box-shadow: $black-shadow, $inner-shadow;
     font-style: italic;
     letter-spacing: 0.5px;
+    height: 40px;
+    line-height: 1;
 
     &:active {
         box-shadow: none;

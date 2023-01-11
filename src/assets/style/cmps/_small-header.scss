@@ -1,0 +1,57 @@
+header.small {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    gap: 5px;
+    // position: relative;
+
+    .menu-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: $purple;
+        border: 1px solid $white;
+        box-shadow: $black-shadow;
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        & > * {
+            width: 15px;
+            fill: $white;
+            transform: translateX(1px);
+        }
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        h1.logo {
+            font-family: ga;
+            color: $yellow;
+            font-size: rem(25px);
+            line-height: 1.375;
+            transform: translateY(5px);
+        }
+
+        .logo-box {
+            svg {
+                height: 55px;
+            }
+        }
+    }
+
+    .hr {
+        width: 375px;
+    }
+}
