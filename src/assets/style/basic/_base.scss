@@ -70,8 +70,7 @@ input {
 }
 
 button {
-    // width: 100%;
-    // max-width: 385px;
+    width: 100%;
     font-family: os-i, sans-serif;
     font-size: rem(18px);
     padding: 10px 20px;
@@ -92,24 +91,29 @@ button {
 }
 
 .btn-pink {
+    border: 3px solid $pink-dark;
     background-color: $pink;
     color: $txt;
 }
 .btn-green {
+    border: 3px solid $green-dark;
     background-color: $green;
     color: $txt;
 }
 .btn-blue {
+    border: 3px solid $blue-dark;
     background-color: $blue;
     color: $txt;
 }
 
 .btn-yellow {
+    border: 3px solid $yellow-dark;
     background-color: $yellow;
     color: $bg;
 }
 
 .btn-gray {
+        border: 3px solid $gray-dark;
     background-color: $gray;
     color: $txt;
 }

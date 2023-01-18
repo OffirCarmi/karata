@@ -1,11 +1,11 @@
 import Logo from "../assets/icons/Logo";
 import Hr from "./hr";
-import MenuBtn from "./menu/menu-btn/menu-btn";
+import MenuWrapper from "./menu/menu-wrapper";
 
 const SmallHeader = () => {
   return (
     <header className="small">
-      <MenuBtn />
+      <MenuWrapper />
       <div className="logo">
         <div className="logo-box">
           <Logo />

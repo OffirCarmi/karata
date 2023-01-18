@@ -1,12 +1,18 @@
 // COLOR PALETTE
 $txt: #fafbfc;
 $bg: #1e0664;
+$bg-dark: darken($bg, 5%);
 $purple: #715cbc;
 $yellow: #f5be0a;
+$yellow-dark: darken($yellow, 5%);
 $green: #1ec896;
+$green-dark: darken($green, 5%);
 $pink: #da447d;
+$pink-dark: darken($pink, 5%);
 $blue: #417dfe;
+$blue-dark: darken($blue, 5%);
 $gray: #4d4d4d;
+$gray-dark: darken($gray, 5%);
 
 $black: #0a0a0a;
 $white: #ffffff;
@@ -18,5 +24,5 @@ $white-opc: #ffffff35;
 $white-shadow: 0 0 10px #ffffff50;
 $black-shadow: 0 5px 5px 0 $black-opc;
 
-$inner-shadow: inset 0px -5px 3px 0  $black-opc;
-$active-shadow: inset 0px 5px 3px 0  $black-opc;
+$inner-shadow: inset 0px -5px 3px 0 $black-opc;
+$active-shadow: inset 0px 5px 3px 0 $black-opc;
