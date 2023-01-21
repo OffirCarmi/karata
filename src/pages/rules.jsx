@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import MenuWrapper from "../cmps/menu/menu-wrapper";
 import SmallHeader from "../cmps/small-header";
 
 const Rules = () => {
@@ -29,8 +30,8 @@ const Rules = () => {
         <div className="circle"></div>
         <p>המנצח הוא השחקן הראשון שמגיע ל20 נקודות!</p>
       </div>
-      <Link to="/auth">
-        <button className="btn-pink">כניסה למערכת</button>
+      <Link className="auth-btn" to="/auth">
+        <button className="pink-btn">כניסה למערכת</button>
       </Link>
     </main>
   );

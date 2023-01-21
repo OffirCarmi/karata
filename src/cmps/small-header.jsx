@@ -6,11 +6,11 @@ const SmallHeader = () => {
   return (
     <header className="small">
       <MenuWrapper />
-      <div className="logo">
-        <div className="logo-box">
+      <div className="logo-box">
+        <div className="icon">
           <Logo />
         </div>
-        <h1 className="logo">קרעת אותי...</h1>
+        <h1 className="name">קרעת אותי...</h1>
       </div>
       <Hr />
     </header>

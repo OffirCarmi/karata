@@ -1,103 +1,28 @@
 header.small {
+    position: relative;
+
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
     gap: 5px;
-    // position: relative;
 
-    // .menu-btn {
-    //     position: absolute;
-    //     top: 20px;
-    //     right: 20px;
-    //     background-color: $purple;
-    //     border: 1px solid $white;
-    //     box-shadow: $black-shadow;
-    //     height: 30px;
-    //     width: 30px;
-    //     border-radius: 30px;
+    padding: 3px 0 0;
+    width: 375px;
 
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-
-    //     // & > * {
-    //     //     stroke: $white;
-    //     //     stroke-linecap: round;
-    //     //     stroke-miterlimit: 10;
-    //     //     stroke-width: 2px;
-
-    //     //     width: 8px;
-    //     // }
-
-    //     // &.open {
-    //     //     animation: to-open 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    //     //     @keyframes to-open {
-    //     //         0% {
-    //     //             .stripe-top {
-    //     //                 transform: translateY(4px);
-    //     //             }
-
-    //     //             .stripe-btm {
-    //     //                 transform: translateY(-4px);
-    //     //             }
-    //     //         }
-
-    //     //         100% {
-    //     //             .stripe-top {
-    //     //                 transform: translateY(0);
-    //     //             }
-
-    //     //             .stripe-btm {
-    //     //                 transform: translateY(0);
-    //     //             }
-    //     //         }
-    //     //     }
-    //     // }
-
-    //     // &.close {
-    //     //     animation: close 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    //     //     @keyframes close {
-    //     //         0% {
-    //     //             .stripe-top {
-    //     //                 transform: translateY(0);
-    //     //             }
-
-    //     //             .stripe-btm {
-    //     //                 transform: translateY(0);
-    //     //             }
-    //     //         }
-
-    //     //         100% {
-    //     //             .stripe-top {
-    //     //                 transform: translateY(4px);
-    //     //             }
-
-    //     //             .stripe-btm {
-    //     //                 transform: translateY(-4px);
-    //     //             }
-    //     //         }
-    //     //     }
-    //     // }
-    // }
-
-    .logo {
+    .logo-box {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
 
-        h1.logo {
+        .name {
             font-family: ga;
             color: $yellow;
             font-size: rem(25px);
             line-height: 1.375;
-            // transform: translateY(5px);
-            // z-index: 5;
         }
 
-        .logo-box {
+        .icon {
             svg {
                 height: 55px;
             }
@@ -109,24 +34,21 @@ header.small {
     }
 
     .menu-wrapper {
+
         .screen {
             position: absolute;
             top: 0;
-            right: 0;
+            right: -23.5%;
             height: 100vh;
-            width: 100vh;
+            width: 550px;
             background-color: $black;
             opacity: 0.85;
-
         }
 
         .menu-btn {
             position: absolute;
             top: 20px;
             right: 20px;
-
-            // background-color: $purple;
-
             border: 2px solid $white;
             box-shadow: $black-shadow;
             height: 30px;
@@ -155,7 +77,6 @@ header.small {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-
                 display: flex;
                 flex-direction: column;
                 gap: 25px;

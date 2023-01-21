@@ -1,10 +1,6 @@
 .rules {
     background-image: linear-gradient(160deg, $purple, $bg);
-    padding-top: 10px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 0 15px;
     gap: 30px;
 
     .text {
@@ -12,22 +8,21 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        width: 356px;
 
-        margin: 0 15px;
+        // margin: 0 15px;
         padding: 30px 15px;
         border-radius: 20px;
         background-color: $bg;
+        border: 3px solid $bg-dark;
         box-shadow: $white-shadow;
 
-        h3 {
-            font-family: ga;
-            color: $yellow;
-            font-size: rem(20px);
-            margin-bottom: 10px;
+        h2 {
+            margin-bottom: 5px;
         }
 
         p {
-            font-size: rem(18px);
+            font-size: rem(16px);
             text-align: center;
             max-width: 40ch;
             line-height: 1.25;
@@ -46,11 +41,7 @@
         }
     }
 
-    a {
-        width: 100%;
-        padding: 0 15px;
-        button {
-            width: 100%;
-        }
+    .auth-btn {
+        width: 356px;
     }
 }
