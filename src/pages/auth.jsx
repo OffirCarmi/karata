@@ -7,7 +7,7 @@ const Auth = () => {
       <SmallHeader />
       <h2>כניסה למערכת</h2>
       <AuthForms />
-      <p>או</p>
+      <span>או</span>
       <button className="yellow-btn google-btn">כניסה עם google</button>
     </main>
   );

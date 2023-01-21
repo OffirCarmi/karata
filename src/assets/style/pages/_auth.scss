@@ -5,18 +5,34 @@
     gap: 30px;
 
     .auth-forms {
-        width: 356px;
+        width: 375px;
+        height: 400px;
+        
         background-color: $bg;
         border-radius: 20px;
-        padding: 15px 15px;
+        padding: 15px 15px 30px;
 
-        .top {
-            margin-bottom: 30px;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
 
         form {
             display: flex;
             flex-direction: column;
+            gap: 15px;
+
+            input {
+                width: 150px;
+                height: 35px;
+                padding: 0 10px;
+                border: 2px solid $green;
+            }
+
+            &.signup {
+                input {
+                    border: 2px solid $pink;
+                }
+            }
         }
 
         h3 {
@@ -26,11 +42,11 @@
             margin-bottom: 15px;
         }
 
-        h3.registered-player {
+        h3.login {
             color: $green;
         }
 
-        h3.new-player {
+        h3.signup {
             color: $pink;
         }
 
@@ -45,18 +61,17 @@
             }
 
             button {
-                width: 78%;
                 margin: 0 15px;
                 letter-spacing: -0.5px;
             }
         }
     }
 
-    p {
+    span {
         margin: -15px 0;
     }
 
     .google-btn {
-        width: 356px;
+        width: 375px;
     }
 }

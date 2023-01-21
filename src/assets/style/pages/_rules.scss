@@ -8,7 +8,7 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        width: 356px;
+        width: 375px;
 
         // margin: 0 15px;
         padding: 30px 15px;
@@ -37,11 +37,11 @@
             height: 5px;
             width: 5px;
             border-radius: 5px;
-            background-color: $yellow;
+            background-color: $green;
         }
     }
 
     .auth-btn {
-        width: 356px;
+        width: 375px;
     }
 }

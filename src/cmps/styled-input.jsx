@@ -1,8 +1,34 @@
-// import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import { TextField } from "@material-ui/core";
+import { ClassNames } from "@emotion/react";
+import { makeStyles } from "@material-ui/core";
+import TextField from "@material-ui/core/TextField";
 
-const StyledInput = ({ label, color = "#1ec896" }) => {
-  return <TextField label={label} variant="outlined" color="secondary" />;
+const useStyles = makeStyles({
+  input: {
+    // backgroundColor: "transparent",
+    marginBottom: 10,
+    borderRadius: 20,
+    
+    // height: 30,
+    // lineHeight: 30,
+    // '&:hover': {
+
+    // }
+  },
+});
+
+const StyledInput = ({ label, type, setValue }) => {
+  const classes = useStyles();
+
+  return (
+    <TextField
+      onChange={(e) => setValue(e.target.value)}
+      label={label}
+      // color={type}
+      className={classes.input}
+      variant="outlined"
+      type={label === "סיסמא" ? "password" : "text"}
+    />
+  );
 };
 
 export default StyledInput;

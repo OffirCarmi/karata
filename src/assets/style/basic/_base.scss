@@ -7,7 +7,7 @@
 }
 
 html {
-    font-family: os, sans-serif;
+    font-family: sans-serif;
     color: $txt;
     font-size: rem(14px);
 }
@@ -47,8 +47,12 @@ p {
     margin: 0;
 }
 
+p{
+    font-weight: 100;
+}
+
 h2 {
-    color: $green;
+    color: $yellow;
     font-size: rem(20px);
     font-family: ga;
     font-weight: lighter;
@@ -61,26 +65,27 @@ img {
 }
 
 input {
-    // border: none;
-    // outline: none;
-    // background: $white;
+    border: none;
+    outline: none;
+    background: $white;
     // font-family: os, sans-serif;
-    // color: $black;
+    color: $black;
+    border-radius: 5px;
     // height: 30px;
 }
 
 button {
     width: 100%;
     color: $txt;
-    font-family: os-i, sans-serif;
-    font-size: rem(18px);
+    // font-family: os-i, sans-serif;
+    font-size: rem(16px);
     padding: 10px 20px;
     border-radius: 100px;
     border: none;
     outline: none;
     box-shadow: $black-shadow, $inner-shadow;
     font-style: italic;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.25px;
     height: 40px;
     line-height: 1;
 

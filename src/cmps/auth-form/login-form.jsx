@@ -1,21 +1,39 @@
-import { TextField } from "@mui/material";
-// import { createTheme } from "@mui/material/styles";
-import StyledInput from "../styled-input";
+import { useState } from "react";
 
 const LoginForm = () => {
-    const color = "#1ec896";
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("name:", name);
+    console.log("password:", password);
+  };
 
   return (
-    <>
-      <h3 className="registered-player">שחקן רשום</h3>
-      <section className="form-container top">
-        <form>
-          <StyledInput label="שם שחקן.ית" color={color} />
-          <StyledInput label="סיסמא" color={color} />
+    <section className="login">
+      <h3 className="login">שחקן רשום</h3>
+      <div className="form-container">
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input
+            type="text"
+            placeholder="שם שחקן.ית"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+
+          <input
+            type="password"
+            placeholder="סיסמא"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </form>
-        <button className="yellow-btn">תכניס אותי כבררר</button>
-      </section>
-    </>
+        <button className="yellow-btn" onClick={handleSubmit}>
+          תכניס אותי כבררר
+        </button>
+      </div>
+    </section>
   );
 };
 

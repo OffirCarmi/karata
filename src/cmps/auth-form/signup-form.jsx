@@ -1,19 +1,51 @@
-import { TextField } from "@mui/material";
+import { useState } from "react";
 
 const SignupForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmedPass, setConfirmedPass] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(name, email, password, confirmedPass);
+  };
+
   return (
-    <>
-      <h3 className="new-player">שחקן חדש</h3>
-      <section className="form-container">
-        <form action="">
-          <TextField type="text" label="שם שחקן.ית" variant="outlined" />
-          <TextField type="text" label="email" variant="outlined" />
-          <TextField type="text" label="סיסמא" variant="outlined" />
-          <TextField type="text" label="אימות סיסמא" variant="outlined" />
+    <section className="signup">
+      <h3 className="signup">שחקן חדש</h3>
+      <div className="form-container btm">
+        <form className="signup" onSubmit={(e) => handleSubmit(e)}>
+          <input
+            type="text"
+            placeholder="שם שחקן.ית"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="אימייל"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="אימות סיסמא"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="סיסמא"
+            value={confirmedPass}
+            onChange={(e) => setConfirmedPass(e.target.value)}
+          />
         </form>
-        <button className="yellow-btn">תרשום אותי</button>
-      </section>
-    </>
+        <button className="yellow-btn" onClick={(e) => handleSubmit(e)}>
+          יאללה בוא נתחיל
+        </button>
+      </div>
+    </section>
   );
 };
 
