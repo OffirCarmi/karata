@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/karata/static/css/main.21cd42e9.css",
+    "main.css": "/karata/static/css/main.fa12e253.css",
     "main.js": "/karata/static/js/main.db291ace.js",
     "static/media/offir.png": "/karata/static/media/offir.c5c5ea3683a280bcd5c0.png",
     "static/media/OpenSans-Bold.ttf": "/karata/static/media/OpenSans-Bold.dbb97fd982ce1b96b6de.ttf",
@@ -11,11 +11,11 @@
     "static/media/OpenSans-Italic.ttf": "/karata/static/media/OpenSans-Italic.20653d2fac6285bf4dea.ttf",
     "static/media/gadi-almog-regular-aaa.otf": "/karata/static/media/gadi-almog-regular-aaa.431e629642034fe87586.otf",
     "index.html": "/karata/index.html",
-    "main.21cd42e9.css.map": "/karata/static/css/main.21cd42e9.css.map",
+    "main.fa12e253.css.map": "/karata/static/css/main.fa12e253.css.map",
     "main.db291ace.js.map": "/karata/static/js/main.db291ace.js.map"
   },
   "entrypoints": [
-    "static/css/main.21cd42e9.css",
+    "static/css/main.fa12e253.css",
     "static/js/main.db291ace.js"
   ]
 }
