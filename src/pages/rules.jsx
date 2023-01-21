@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import MenuWrapper from "../cmps/menu/menu-wrapper";
 import SmallHeader from "../cmps/small-header";
 
 const Rules = () => {
