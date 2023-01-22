@@ -7,10 +7,11 @@
 @import "./basic/base";
 
 //PAGES
-@import "./pages/welcome";
+@import "./pages/root";
 @import "./pages/rules";
 @import "./pages/auth";
 @import "./pages/about";
+@import "./pages/welcome";
 
 // COMPONENTS
 @import "./cmps/big-header";

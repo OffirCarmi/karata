@@ -12,7 +12,7 @@ const LoginForm = () => {
 
   return (
     <section className="login">
-      <h3 className="login">שחקן רשום</h3>
+      <h5 className="login">שחקן רשום</h5>
       <div className="form-container">
         <form onSubmit={(e) => handleSubmit(e)}>
           <input

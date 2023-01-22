@@ -13,7 +13,7 @@ const SignupForm = () => {
 
   return (
     <section className="signup">
-      <h3 className="signup">שחקן חדש</h3>
+      <h5 className="signup">שחקן חדש</h5>
       <div className="form-container btm">
         <form className="signup" onSubmit={(e) => handleSubmit(e)}>
           <input

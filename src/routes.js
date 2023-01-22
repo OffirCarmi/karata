@@ -1,12 +1,13 @@
-import Welcome from "./pages/welcome.jsx";
+import Root from "./pages/root.jsx";
 import Rules from "./pages/rules.jsx";
 import Auth from "./pages/auth.jsx";
 import About from "./pages/about.jsx";
+import Welcome from "./pages/welcome.jsx";
 
 const routes = [
   {
     path: "/",
-    component: Welcome,
+    component: Root,
   },
   {
     path: "/rules",
@@ -19,6 +20,10 @@ const routes = [
   {
     path: "/about",
     component: About,
+  },
+  {
+    path: "/welcome",
+    component: Welcome,
   },
 ];
 

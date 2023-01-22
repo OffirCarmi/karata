@@ -1,0 +1,16 @@
+.root {
+    background-image: linear-gradient(160deg, $purple, $bg);
+
+    padding: 75px 15px;
+    gap: 100px;
+
+    .btns-box {
+
+        width: 324px;
+
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

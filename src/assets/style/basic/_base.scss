@@ -47,15 +47,41 @@ p {
     margin: 0;
 }
 
-p{
+p {
     font-weight: 100;
 }
 
+//logo
+h1 {
+    font-family: ga;
+}
+
+// page title
 h2 {
     color: $yellow;
     font-size: rem(20px);
     font-family: ga;
     font-weight: lighter;
+}
+
+//slogans
+h3 {
+    font-family: ga;
+    font-size: rem(20px);
+    color: $green;
+    text-align: center;
+}
+
+// friends/players
+h4 {
+    font-size: rem(18px);
+    font-weight: 100;
+}
+
+//section title/email
+h5 {
+    font-size: rem(14px);
+    font-weight: 100;
 }
 
 img {
@@ -84,16 +110,34 @@ button {
     border: none;
     outline: none;
     box-shadow: $black-shadow, $inner-shadow;
+    box-shadow: $black-shadow;
     font-style: italic;
     letter-spacing: 0.25px;
     height: 40px;
     line-height: 1;
 
     &:active {
-        box-shadow: none;
+        // box-shadow: none;
         transform: scale(97%);
-        box-shadow: $active-shadow;
+        // box-shadow: $active-shadow;
     }
+}
+
+button:disabled{
+    background-color: $gray-dark;
+    // color: $bg;
+    box-shadow: none;
+    
+    &:active{
+        transform: scale(100%);
+    }
+}
+
+.frame {
+    border: 3px solid $bg-dark;
+    box-shadow: $white-shadow;
+    background-color: $bg;
+    border-radius: 20px;
 }
 
 .pink-btn {

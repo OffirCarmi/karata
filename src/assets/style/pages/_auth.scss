@@ -7,10 +7,7 @@
     .auth-forms {
         width: 375px;
         height: 400px;
-        
-        background-color: $bg;
-        border: 3px solid $bg-dark;
-        border-radius: 20px;
+
         padding: 15px 15px 30px;
 
         display: flex;
@@ -36,19 +33,16 @@
             }
         }
 
-        h3 {
-            font-size: rem(14px);
-            font-weight: 100;
+        h5.login {
+            color: $green;
             font-style: italic;
             margin-bottom: 15px;
         }
 
-        h3.login {
-            color: $green;
-        }
-
-        h3.signup {
+        h5.signup {
             color: $pink;
+            font-style: italic;
+            margin-bottom: 15px;
         }
 
         .form-container {

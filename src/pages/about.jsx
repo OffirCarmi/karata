@@ -9,7 +9,7 @@ const About = () => {
       <SmallHeader />
       <h2>על המשחק</h2>
       <div className="about-box">
-        <div className="my-words">
+        <div className="my-words frame">
           <p>היי, אני אופיר כרמי ואני מפתח תוכנה</p>
           <p>
             אחד הדברים שהכי מציק לי זה אנשים ששוקעים בטלפון בזמן שהם בחברת אנשים
@@ -21,9 +21,6 @@ const About = () => {
           </p>
           <p>אני מזמין אתכם לשחק ולצחוק עם החברים שלכם במשחק !</p>
         </div>
-        {/* <h4>
-          כי אם כבר כולם שקועים במסך, <br /> לפחות שיהיה קורע...
-        </h4> */}
         <section className="contact-box">
           <div className="img-box">
             <img src={require("../assets/imgs/offir.png")} alt="Offir Carmi" />

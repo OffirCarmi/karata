@@ -13,7 +13,7 @@ const Menu = ({ setOpen }) => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">עמוד ראשי</NavLink>
+            <NavLink to="/welcome">עמוד ראשי</NavLink>
           </li>
           <li>
             <NavLink to="/game">המשחקים שלי</NavLink>

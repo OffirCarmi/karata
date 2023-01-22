@@ -3,7 +3,7 @@ import SignupForm from "./signup-form";
 
 const AuthForms = () => {
   return (
-    <section className="auth-forms">
+    <section className="auth-forms frame">
       <LoginForm />
       <SignupForm />
     </section>

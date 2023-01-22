@@ -1,13 +1,12 @@
 .about {
     background-image: linear-gradient(160deg, $purple, $bg);
     padding-top: 5px;
-    overflow: hidden;
+    overflow-x: hidden;
 
     gap: 30px;
 
     .about-box {
         width: 375px;
-        max-height: calc(100vh - 95px - 72.58px);
 
         display: flex;
         flex-direction: column;
@@ -22,59 +21,56 @@
             width: 375px;
 
             padding: 30px 15px;
-            border-radius: 20px;
-            background-color: $bg;
-            border: 3px solid $bg-dark;
-            box-shadow: $white-shadow;
 
             p {
                 font-size: rem(17px);
                 text-align: center;
-                line-height: 1.35;
+                line-height: 1.5;
+                letter-spacing: 0.25px;
+                font-weight: 100;
             }
-        }
-
-        h4 {
-            font-size: rem(20px);
-            font-family: ga;
-            color: $green;
-            letter-spacing: 1px;
-            text-align: center;
-            margin: 15px 0;
         }
 
         .contact-box {
             display: flex;
+            justify-content: center;
             flex-grow: 1;
             background-color: $bg;
             width: 550px;
-
+            padding-top: 35px;
+            
             .img-box {
+                z-index: 10;
                 align-self: flex-end;
-                width: 35%;
-                transform: translate(-50%, 3px);
+                width: 175px;
+                
+                img {
+                }
             }
             
             .contact {
-                transform: translateX(-40%); 
-                // width: 35%;
+                z-index: 10;
+                margin: 0 15px;
                 align-self: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
+                padding-bottom: 35px;
 
                 p {
+                    color: $green;
                     text-align: center;
                     line-height: 1.35;
+                    font-weight: 600;
                 }
 
                 h5 {
                     font-size: rem(20px);
-                    font-weight: 300;
                 }
 
                 svg {
+                    box-shadow: $white-shadow;
                     margin-top: 10px;
                     height: 36px;
                 }
