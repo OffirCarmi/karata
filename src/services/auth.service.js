@@ -20,6 +20,7 @@ const logout = () => {
 };
 
 const signup = async (playerToAdd) => {
+  console.log("signing up");
   const { name, email, password } = playerToAdd;
 
   const newPlayer = {
@@ -43,11 +44,17 @@ const getLoggedinUser = () => {
   return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER));
 };
 
+const getAllPlayersNames = async () => {
+  const players = await storageService.load(STORAGE_KEY_PLAYERS);
+  return players.map((player) => player.name);
+};
+
 export const authService = {
   login,
   logout,
   signup,
   getLoggedinUser,
+  getAllPlayersNames,
 };
 
 // (async () => {
