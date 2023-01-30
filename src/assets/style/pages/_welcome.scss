@@ -3,7 +3,7 @@
     padding: 0 15px;
     gap: 30px;
 
-    p {
+    p.player-welcome {
         font-weight: 400;
         font-size: rem(20px);
 
@@ -14,8 +14,12 @@
         }
     }
 
-    .slogan {
-        margin-bottom: -15px;
+    .call-to-action {
+        text-align: center;
+
+        h3.slogan {
+            margin-bottom: -15px;
+        }
     }
 
     pre {
@@ -25,31 +29,41 @@
     }
 
     .friends-area {
-        display: grid;
-        grid-template-rows: repeat(6, 30px);
-        grid-template-columns: repeat(2, 130px);
-        gap: 15px 15px;
-
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
 
         padding: 30px;
 
-        .call-to-action {
-            text-align: center;
+        .no-friends {
+            width: 290px;
+            height: 210px;
 
-            h3.slogan {
+
+            p.no-firends {
+                color: $pink;
+                text-align: center;
+                line-height: 210px;
+                font-size: rem(24px);
             }
         }
 
-        .friend-preview {
-            &.selected {
-                h4 {
-                    color: $pink;
+        .friend-list {
+            display: grid;
+            grid-template-rows: repeat(6, 30px);
+            grid-template-columns: repeat(2, 130px);
+            gap: 15px 15px;
+            justify-items: center;
+
+            .friend-preview {
+                &.selected {
+                    h4 {
+                        color: $pink;
+                    }
                 }
             }
         }
+
         button {
-            grid-column: 1/-1;
             font-size: rem(18px);
         }
     }

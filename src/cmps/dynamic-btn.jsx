@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom";
 
-const DynamicBtn = ({ friendsNum, inviteFriendsToGame }) => {
-  if (friendsNum === 0) {
+const DynamicBtn = ({
+  playersFriends,
+  invitedFriends,
+  inviteFriendsToGame,
+}) => {
+  if (!playersFriends) {
     return (
-      //   <Link to="/friends">
-      <button disabled className="grid-btn">
-        בחר.י חברים למשחק
-      </button>
-      //   </Link>
+      <Link to="/friends">
+        <button className="yellow-btn">לחץ.י כאן כדי להוסיף חברים</button>
+      </Link>
     );
   }
 
-  if (friendsNum === 3) {
+  if (invitedFriends === 0) {
+    return <button disabled>בחר.י חברים למשחק</button>;
+  } else if (invitedFriends === 3) {
     return (
       //   <Link to="/game/:id?">
       <button onClick={inviteFriendsToGame} className="grid-btn pink-btn">
@@ -19,18 +23,7 @@ const DynamicBtn = ({ friendsNum, inviteFriendsToGame }) => {
       </button>
       //   </Link>
     );
-  } else
-    return (
-      //   <Link to="/friends">
-      <button
-        disabled
-        className="grid-btn"
-        // style={{ color: "#da447d" }}
-      >
-        חסרים עוד {3 - friendsNum} חברים
-      </button>
-      //   </Link>
-    );
+  } else return <button disabled>חסרים עוד {3 - invitedFriends} חברים</button>;
 };
 
 export default DynamicBtn;

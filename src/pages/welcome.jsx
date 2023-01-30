@@ -3,23 +3,35 @@ import DynamicBtn from "../cmps/dynamic-btn";
 
 import FriendsList from "../cmps/friends/friends-list";
 import SmallHeader from "../cmps/small-header";
+import { authService } from "../services/auth.service";
 
 const Welcome = () => {
-  const player = {
-    name: "גילי",
-    friends: [
-      { name: "משה", _id: "moshe" },
-      { name: "דודו", _id: "dudu" },
-      { name: "הילה", _id: "hila" },
-      { name: "גלית", _id: "galit" },
-      { name: "ירון", _id: "yaron" },
-      { name: "sivan99", _id: "sivan99" },
-      { name: "סיווני", _id: "sivani" },
-      { name: "עומר87", _id: "omer87" },
-      { name: "אבי", _id: "avi" },
-      { name: "ניר", _id: "nir" },
-    ],
+  const [player, setPlayer] = useState(authService.getLoggedinUser());
+
+  // useEffect(() => {
+  //   setPlayer(loadPlayer());
+  // }, []);
+
+  const loadPlayer = () => {
+    return authService.getLoggedinUser();
   };
+
+  // const player = authService.getLoggedinUser();
+  // const player = {
+  //   name: "גילי",
+  //   friends: [
+  //     { name: "משה", _id: "moshe" },
+  //     { name: "דודו", _id: "dudu" },
+  //     { name: "הילה", _id: "hila" },
+  //     { name: "גלית", _id: "galit" },
+  //     { name: "ירון", _id: "yaron" },
+  //     { name: "sivan99", _id: "sivan99" },
+  //     { name: "סיווני", _id: "sivani" },
+  //     { name: "עומר87", _id: "omer87" },
+  //     { name: "אבי", _id: "avi" },
+  //     { name: "ניר", _id: "nir" },
+  //   ],
+  // };
 
   const [invitedFriends, setInvitedFriends] = useState([]);
 
@@ -49,7 +61,7 @@ const Welcome = () => {
   return (
     <main className="welcome">
       <SmallHeader />
-      <p>
+      <p className="player-welcome">
         <span>{player.name}</span>, איזה כיף שאת.ה כאן !
       </p>
       <div className="call-to-action">
@@ -59,7 +71,11 @@ const Welcome = () => {
       </div>
       <pre>בוחרים 3 חברים ומזמינים אותם למשחק חדש</pre>
       <div className="friends-area frame">
-        {!player.friends.length && <p>רשימת החברים שלך ריקה</p>}
+        {!player.friends.length && (
+          <div className="no-friends">
+            <p className="no-firends">רשימת החברים שלך ריקה</p>
+          </div>
+        )}
         {player.friends.length > 0 && (
           <FriendsList
             friends={player.friends}
@@ -68,7 +84,8 @@ const Welcome = () => {
           />
         )}
         <DynamicBtn
-          friendsNum={invitedFriends.length}
+          playersFriends={player.friends.length}
+          invitedFriends={invitedFriends.length}
           inviteFriendsToGame={inviteFriendsToGame}
         />
       </div>
