@@ -1,6 +1,6 @@
 import FriendPreview from "./friend-preview";
 
-const FriendsList = ({ friends, invitedFriends, onToggleFriend }) => {
+const FriendList = ({ friends, invitedFriends, onToggleFriend }) => {
   return (
     <section className="friend-list">
       {friends.map((friend) => (
@@ -15,4 +15,4 @@ const FriendsList = ({ friends, invitedFriends, onToggleFriend }) => {
   );
 };
 
-export default FriendsList;
+export default FriendList;

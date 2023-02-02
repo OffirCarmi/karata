@@ -3,6 +3,7 @@ $txt: #fafbfc;
 $bg: #1e0664;
 $bg-dark: darken($bg, 5%);
 $purple: #715cbc;
+$purple-opc: #715cbc96;
 $yellow: #f5be0a;
 $yellow-dark: darken($yellow, 5%);
 $green: #1ec896;
@@ -19,6 +20,8 @@ $white: #ffffff;
 
 $black-opc: #0a0a0a25;
 $white-opc: #ffffff35;
+
+$main-app-shadow: 2px 0 5px 0 $black-opc, -2px 0 5px 0 $black-opc;
 
 // SHADOW
 $white-shadow: 0 0 10px #ffffff50;

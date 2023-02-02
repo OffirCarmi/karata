@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import { authService } from "../../services/auth.service";
+import ErrorMsg from "./error-msg";
 
 const LoginForm = () => {
   const {
@@ -24,29 +25,20 @@ const LoginForm = () => {
         <form id="login-form" onSubmit={handleSubmit(onSubmit)}>
           <input
             {...register("name", {
-              required: "שדה חובה למילוי",
+              required: "*שדה חובה למילוי",
               minLength: { value: 2, message: "שם חייב להיות 2 תווים לפחות" },
             })}
             type="text"
             placeholder="שם שחקן.ית"
           />
-          <p
-            className="validation-message"
-            style={{ display: errors.name?.message ? "block" : "none" }}
-          >
-            {errors.name?.message}
-          </p>
+          {errors.name && <ErrorMsg errors={errors} field="name" />}
+
           <input
-            {...register("password", { required: "שדה חובה למילוי" })}
+            {...register("password", { required: "*שדה חובה למילוי" })}
             type="password"
             placeholder="סיסמא"
           />
-          <p
-            className="validation-message"
-            style={{ display: errors.password?.message ? "block" : "none" }}
-          >
-            {errors.password?.message}
-          </p>
+          {errors.password && <ErrorMsg errors={errors} field="password" />}
         </form>
         <button
           form="login-form"

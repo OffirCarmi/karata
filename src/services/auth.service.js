@@ -49,17 +49,45 @@ const getAllPlayersNames = async () => {
   return players.map((player) => player.name);
 };
 
+const searchFriends = async (searchBy, playerId) => {
+  const players = await storageService.load(STORAGE_KEY_PLAYERS);
+  return players
+    .filter(
+      ({ _id, name }) =>
+        name.toLowerCase().includes(searchBy.toLowerCase()) && _id !== playerId
+    )
+    .map(({ _id, name }) => ({ _id, name }));
+};
+
+const getPlayer = async (playerId) => {
+  const players = await storageService.load(STORAGE_KEY_PLAYERS);
+  return players.find((player) => player._id === playerId);
+};
+
 export const authService = {
   login,
   logout,
   signup,
   getLoggedinUser,
   getAllPlayersNames,
+  searchFriends,
+  getPlayer,
 };
 
 // (async () => {
 //   await signup({ name: "michal", email: "michal@gmail.com", password: "123" });
-//   await signup({ name: "yaron", email: "yaron@gmail.com", password: "123" });
+//   await signup({ name: "dudi99", email: "dudi99@gmail.com", password: "123" });
 //   await signup({ name: "עופר", email: "ofer@gmail.com", password: "123" });
-//   // await signup({ name: "גילי", email: "gili@gmail.com", password: "123" });
+//   await signup({ name: "K מאסטר", email: "masterK@gmail.com", password: "123" });
+//   await signup({ name: "ran ran", email: "ranran@gmail.com", password: "123" });
+//   await signup({ name: "alush", email: "alush@gmail.com", password: "123" });
+//   await signup({ name: "BaLaGaN", email: "balagan@gmail.com", password: "123" });
+//   await signup({ name: "AMY", email: "amy@gmail.com", password: "123" });
+//   await signup({ name: "wawa wiwa", email: "wawi@gmail.com", password: "123" });
+//   await signup({ name: "רירי", email: "riri@gmail.com", password: "123" });
+//   await signup({ name: "A-exp", email: "aexp@gmail.com", password: "123" });
+//   await signup({ name: "doWhat", email: "youwant@gmail.com", password: "123" });
+//   await signup({ name: "2002abc", email: "a02@gmail.com", password: "123" });
+//   await signup({ name: "taltul", email: "tal@gmail.com", password: "123" });
+//   await signup({ name: "בילי", email: "bili@gmail.com", password: "123" });
 // })();

@@ -32,11 +32,14 @@ import routes from "./routes";
 const App = () => {
   return (
     // <ThemeProvider theme={theme}>
-    <Routes>
-      {routes.map(({ path, component: Component }) => (
-        <Route key={path} element={<Component />} path={path} />
-      ))}
-    </Routes>
+    <>
+      <div className="background"></div>
+      <Routes>
+        {routes.map(({ path, component: Component }) => (
+          <Route key={path} element={<Component />} path={path} />
+        ))}
+      </Routes>
+    </>
     // </ThemeProvider>
   );
 };

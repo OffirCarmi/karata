@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import { authService } from "../../services/auth.service";
+import ErrorMsg from "./error-msg";
 
 const SignupForm = () => {
   const {
@@ -19,13 +20,6 @@ const SignupForm = () => {
     if (newPlayer) navigate("/welcome");
   };
 
-  const checkName = (e) => {
-    // console.log(e.target.value);
-    // return e.target.value !==;
-  };
-
-  const passwordWatch = watch("password");
-
   return (
     <section className="signup">
       <h5 className="signup">שחקן חדש</h5>
@@ -37,56 +31,45 @@ const SignupForm = () => {
         >
           <input
             {...register("name", {
-              required: "שדה חובה למילוי",
+              required: "*שדה חובה למילוי",
               minLength: { value: 2, message: "שם באורך 2 תווים לפחות" },
               validate: async (val) => {
                 const takenNames = await authService.getAllPlayersNames();
                 if (takenNames.includes(val)) return "השם שבחרת תפוס";
               },
             })}
-            type="text"
             placeholder="שם שחקן.ית"
-            // onChange={(e) => checkName(e)}
+            type="text"
           />
-          <p
-            className="validation-message"
-            style={{ display: errors.name?.message ? "block" : "none" }}
-          >
-            {errors.name?.message}
-          </p>
+          {errors.name && <ErrorMsg errors={errors} field="name" />}
+
           <input
             {...register("email", {
-              required: "שדה חובה למילוי",
+              required: "*שדה חובה למילוי",
               pattern: {
                 value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
                 message: "כתובת אימייל לא חוקית",
               },
             })}
             placeholder="אימייל"
+            type="text"
           />
-          <p
-            className="validation-message"
-            style={{ display: errors.email?.message ? "block" : "none" }}
-          >
-            {errors.email?.message}
-          </p>
+          {errors.email && <ErrorMsg errors={errors} field="email" />}
+
           <input
             {...register("password", {
-              required: "שדה חובה למילוי",
-              minLength: { value: 5, message: "סיסמא באורך 5 תווים לפחות" },
+              required: "*שדה חובה למילוי",
+              minLength: { value: 3, message: "סיסמא באורך 3 תווים לפחות" },
             })}
             placeholder="סיסמא"
             type="password"
           />
-          <p
-            className="validation-message"
-            style={{ display: errors.password?.message ? "block" : "none" }}
-          >
-            {errors.password?.message}
-          </p>
+          {errors.password && <ErrorMsg errors={errors} field="password" />}
+
           <input
             {...register("confirm", {
-              required: "שדה חובה למילוי",
+              required: "*שדה חובה למילוי",
+              minLength: { value: 3, message: "סיסמא באורך 3 תווים לפחות" },
               validate: (val) => {
                 if (watch("password") !== val) return "אימות סיסמא נכשל";
               },
@@ -94,36 +77,13 @@ const SignupForm = () => {
             placeholder="אימות סיסמא"
             type="password"
           />
-          <p
-            className="validation-message"
-            style={{ display: errors.confirm?.message ? "block" : "none" }}
-          >
-            {errors.confirm?.message}
-          </p>
-          {/* <input
-            type="email"
-            placeholder="אימייל"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="סיסמא"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="אימות סיסמא"
-            value={confirmedPass}
-            onChange={(e) => setConfirmedPass(e.target.value)}
-          /> */}
+          {errors.confirm && <ErrorMsg errors={errors} field="confirm" />}
         </form>
         <button
           form="signup-form"
           type="submit"
           className="pink-btn"
-          onClick={(e) => handleSubmit(e)}
+          onClick={handleSubmit}
         >
           יאללה בוא נתחיל
         </button>

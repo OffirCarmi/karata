@@ -13,6 +13,7 @@ html {
 }
 
 body {
+    cursor: default;
     direction: rtl;
     margin: 0;
     padding: 0;
@@ -32,6 +33,14 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            z-index: 10;
+            box-shadow: $main-app-shadow;
+        }
+
+        .background {
+            position: fixed;
+            background-color: $purple-opc;
+            width: 100vw;
         }
     }
 }
@@ -98,6 +107,8 @@ input {
     color: $black;
     border-radius: 5px;
     // height: 30px;
+    height: 35px;
+    padding: 0 10px;
 }
 
 button {
@@ -115,6 +126,7 @@ button {
     letter-spacing: 0.25px;
     height: 40px;
     line-height: 1;
+    cursor: pointer;
 
     &:active {
         // box-shadow: none;
@@ -123,12 +135,12 @@ button {
     }
 }
 
-button:disabled{
+button:disabled {
     background-color: $gray-dark;
     // color: $bg;
     box-shadow: none;
-    
-    &:active{
+
+    &:active {
         transform: scale(100%);
     }
 }

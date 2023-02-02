@@ -3,6 +3,7 @@ import Rules from "./pages/rules.jsx";
 import Auth from "./pages/auth.jsx";
 import About from "./pages/about.jsx";
 import Welcome from "./pages/welcome.jsx";
+import Friends from "./pages/friends.jsx";
 
 const routes = [
   {
@@ -24,6 +25,10 @@ const routes = [
   {
     path: "/welcome",
     component: Welcome,
+  },
+  {
+    path: "/friends",
+    component: Friends,
   },
 ];
 

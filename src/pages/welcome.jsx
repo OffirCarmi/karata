@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import DynamicBtn from "../cmps/dynamic-btn";
 
-import FriendsList from "../cmps/friends/friends-list";
+import FriendList from "../cmps/welcome/friend-list";
 import SmallHeader from "../cmps/small-header";
 import { authService } from "../services/auth.service";
 
@@ -15,23 +15,6 @@ const Welcome = () => {
   const loadPlayer = () => {
     return authService.getLoggedinUser();
   };
-
-  // const player = authService.getLoggedinUser();
-  // const player = {
-  //   name: "גילי",
-  //   friends: [
-  //     { name: "משה", _id: "moshe" },
-  //     { name: "דודו", _id: "dudu" },
-  //     { name: "הילה", _id: "hila" },
-  //     { name: "גלית", _id: "galit" },
-  //     { name: "ירון", _id: "yaron" },
-  //     { name: "sivan99", _id: "sivan99" },
-  //     { name: "סיווני", _id: "sivani" },
-  //     { name: "עומר87", _id: "omer87" },
-  //     { name: "אבי", _id: "avi" },
-  //     { name: "ניר", _id: "nir" },
-  //   ],
-  // };
 
   const [invitedFriends, setInvitedFriends] = useState([]);
 
@@ -73,11 +56,11 @@ const Welcome = () => {
       <div className="friends-area frame">
         {!player.friends.length && (
           <div className="no-friends">
-            <p className="no-firends">רשימת החברים שלך ריקה</p>
+            <p className="no-friends">רשימת החברים שלך ריקה</p>
           </div>
         )}
         {player.friends.length > 0 && (
-          <FriendsList
+          <FriendList
             friends={player.friends}
             invitedFriends={invitedFriends}
             onToggleFriend={onToggleFriend}

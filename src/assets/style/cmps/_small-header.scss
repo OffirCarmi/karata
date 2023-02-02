@@ -49,7 +49,7 @@ header.small {
         .menu-btn {
             position: absolute;
             top: 20px;
-            right: 20px;
+            right: 0px;
             border: 2px solid $white;
             box-shadow: $black-shadow;
             height: 30px;
@@ -65,7 +65,7 @@ header.small {
         nav {
             position: absolute;
             top: 20px;
-            right: 35px;
+            right: 15px;
 
             width: 225px;
             background-color: $purple;

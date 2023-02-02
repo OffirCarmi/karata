@@ -20,8 +20,6 @@
 
             input {
                 width: 150px;
-                height: 35px;
-                padding: 0 10px;
                 border: 2px solid $green;
             }
 
@@ -29,12 +27,17 @@
                 input {
                     border: 2px solid $pink;
                 }
-
             }
 
             p.validation-message {
                 margin: -20px 0;
                 font-size: rem(14px);
+                padding-right: 3px;
+
+                &::before {
+                    // content: "⚠";
+                    // content: "☹";
+                }
             }
         }
 
@@ -73,5 +76,6 @@
 
     .google-btn {
         width: 375px;
+        margin-bottom: 50px;
     }
 }
